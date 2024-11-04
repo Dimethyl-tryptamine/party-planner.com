@@ -1,88 +1,78 @@
-body {
-    background-color: brown;
-    color: #95aebd;
-    font-size: large;
-    font-family: Lato;
-    padding: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
+body {
+    color: #95aebd;
+    font-size: large;
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    background-image: url("tp.png");
+    height: 100vh;
+    width: 100%;
+    background-size: contain; /* Adjust to fit the container better */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
     text-align: center;
-    max-width: 1500px;
-    margin: 0 auto; 
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    gap: 2rem; /* Space between items */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 nav a {
     font-family: 'Patrick Hand', cursive;
     text-decoration: none;
     color: #859aa6;
-    font-size: 30px;
-    margin: 0 60px; 
-}
-
-h1, h2, p {
-    padding: 10px;
-}
-
-h1 {
-    margin: 10px 0; 
-}
-
-h2 {
-    margin: 15px 0; 
-    font-family: Lato;
-}
-
-p {
-    margin: 10px 0;
-    font-size: 20px; 
+    font-size: 1.5rem;
 }
 
 .container {
-    max-width: 1500px;
-    margin: 0 auto; 
-    padding: 20px; 
-}
-.title {
     text-align: center;
-    font-size: 60px;
-    font-family: Montserrat, sans-serif;
-    margin-top: -20px;
-}
-.homepage-image {
-    float: right; 
-    margin-left: 0px; 
-    margin-bottom: 0px; 
-    max-width: 450px; 
-    height: auto; 
+    padding: 20px;
 }
 
-.second-homepage-image {
-    float: left; 
-    max-width: 450px;
-    height: auto; 
-    margin-right: 0px;
-    margin-bottom: 0px; 
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banner {
+        background-size: cover; /* Adjust background to cover on smaller screens */
+        background-position: center center;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
 
+    nav ul {
+        gap: 1rem;
+    }
 
-.homepage-image {
-    float: right; 
-}
-
-.second-hompage-image {
-    float: left; 
-}
-.container::after {
-    content: "";
-    display: table;
-    clear: both;
+    nav a {
+        font-size: 1.2rem;
+    }
+    
+    .container h2 {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
 }
